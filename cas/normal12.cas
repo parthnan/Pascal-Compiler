@@ -1,0 +1,1598 @@
+;;============================================================
+;; normal12.pasに対応するcasファイル（lib.casを利用）
+;; casの記述方法には様々な解があるので，唯一の答えでないことに注意．
+CASL	START	BEGIN	; 
+BEGIN	LAD	GR6, 0	; 
+	LAD	GR7, LIBBUF	; 
+	; L9 assign		; assign
+	PUSH	6	; assign	const-uint	(6)
+	LD	GR2, =0	; assign	var	(i)
+	POP	GR1	; assign
+	ST	GR1, VAR, GR2	; assign
+	; L10 assign		; assign
+	PUSH	7	; assign	const-uint	(7)
+	POP	GR2	; assign	minus
+	LD	GR1, =0	; assign	minus
+	SUBA	GR1, GR2	; assign	minus
+	PUSH	0, GR1	; assign	minus
+	LD	GR2, =1	; assign	var	(j)
+	POP	GR1	; assign
+	ST	GR1, VAR, GR2	; assign
+	; L11 assign		; assign
+	PUSH	8	; assign	const-uint	(8)
+	POP	GR2	; assign	minus
+	LD	GR1, =0	; assign	minus
+	SUBA	GR1, GR2	; assign	minus
+	PUSH	0, GR1	; assign	minus
+	LD	GR2, =2	; assign	var	(k)
+	POP	GR1	; assign
+	ST	GR1, VAR, GR2	; assign
+	; L12 assign		; assign
+	LD	GR1, ='A'	; assign	const-str	('A')
+	PUSH	0, GR1	; assign	const-str
+	LD	GR2, =6	; assign	var	(ca)
+	POP	GR1	; assign
+	ST	GR1, VAR, GR2	; assign
+	; L13 assign		; assign
+	LD	GR1, ='b'	; assign	const-str	('b')
+	PUSH	0, GR1	; assign	const-str
+	LD	GR2, =7	; assign	var	(cb)
+	POP	GR1	; assign
+	ST	GR1, VAR, GR2	; assign
+	; L14 assign		; assign
+	PUSH	#0000	; assign	const-bool
+	LD	GR2, =12	; assign	var	(bt)
+	POP	GR1	; assign
+	ST	GR1, VAR, GR2	; assign
+	; L15 assign		; assign
+	PUSH	#FFFF	; assign	const-bool
+	LD	GR2, =13	; assign	var	(bf)
+	POP	GR1	; assign
+	ST	GR1, VAR, GR2	; assign
+	; L17 assign		; assign
+	LD	GR2, =0	; assign	left	var	(i)
+	LD	GR1, VAR, GR2	; assign	left
+	PUSH	0, GR1	; assign	left
+	LD	GR2, =3	; assign	var	(l)
+	POP	GR1	; assign
+	ST	GR1, VAR, GR2	; assign
+	; L18 assign		; assign
+	LD	GR2, =3	; assign	left	var	(l)
+	LD	GR1, VAR, GR2	; assign	left
+	PUSH	0, GR1	; assign	left
+	PUSH	6	; assign	addition	const-uint	(6)
+	POP	GR2	; assign	addition
+	POP	GR1	; assign	addition
+	SUBA	GR1, GR2	; assign	addition
+	PUSH	0, GR1	; assign	addition
+	LD	GR2, =3	; assign	var	(l)
+	POP	GR1	; assign
+	ST	GR1, VAR, GR2	; assign
+	; L19 assign		; assign
+	PUSH	8	; assign	const-uint	(8)
+	LD	GR2, =1	; assign	addition	left	var	(j)
+	LD	GR1, VAR, GR2	; assign	addition	left
+	PUSH	0, GR1	; assign	addition	left
+	POP	GR2	; assign	addition
+	POP	GR1	; assign	addition
+	ADDA	GR1, GR2	; assign	addition
+	PUSH	0, GR1	; assign	addition
+	LD	GR2, =4	; assign	var	(m)
+	POP	GR1	; assign
+	ST	GR1, VAR, GR2	; assign
+	; L20 assign		; assign
+	PUSH	3	; assign	const-uint	(3)
+	LD	GR2, =0	; assign	addition	left	var	(i)
+	LD	GR1, VAR, GR2	; assign	addition	left
+	PUSH	0, GR1	; assign	addition	left
+	POP	GR2	; assign	addition
+	POP	GR1	; assign	addition
+	ADDA	GR1, GR2	; assign	addition
+	PUSH	0, GR1	; assign	addition
+	PUSH	2	; assign	addition	const-uint	(2)
+	POP	GR2	; assign	addition
+	POP	GR1	; assign	addition
+	ADDA	GR1, GR2	; assign	addition
+	PUSH	0, GR1	; assign	addition
+	LD	GR2, =1	; assign	addition	left	var	(j)
+	LD	GR1, VAR, GR2	; assign	addition	left
+	PUSH	0, GR1	; assign	addition	left
+	POP	GR2	; assign	addition
+	POP	GR1	; assign	addition
+	SUBA	GR1, GR2	; assign	addition
+	PUSH	0, GR1	; assign	addition
+	LD	GR2, =2	; assign	addition	left	var	(k)
+	LD	GR1, VAR, GR2	; assign	addition	left
+	PUSH	0, GR1	; assign	addition	left
+	POP	GR2	; assign	addition
+	POP	GR1	; assign	addition
+	ADDA	GR1, GR2	; assign	addition
+	PUSH	0, GR1	; assign	addition
+	PUSH	8	; assign	addition	const-uint	(8)
+	POP	GR2	; assign	addition
+	POP	GR1	; assign	addition
+	SUBA	GR1, GR2	; assign	addition
+	PUSH	0, GR1	; assign	addition
+	LD	GR2, =5	; assign	var	(n)
+	POP	GR1	; assign
+	ST	GR1, VAR, GR2	; assign
+	; L21 assign		; assign
+	LD	GR2, =3	; assign	left	var	(l)
+	LD	GR1, VAR, GR2	; assign	left
+	PUSH	0, GR1	; assign	left
+	LD	GR2, =27	; assign	var	(a0)
+	POP	GR1	; assign
+	ST	GR1, VAR, GR2	; assign
+	; L22 assign		; assign
+	LD	GR2, =4	; assign	left	var	(m)
+	LD	GR1, VAR, GR2	; assign	left
+	PUSH	0, GR1	; assign	left
+	LD	GR2, =28	; assign	var	(a1)
+	POP	GR1	; assign
+	ST	GR1, VAR, GR2	; assign
+	; L23 assign		; assign
+	LD	GR2, =5	; assign	left	var	(n)
+	LD	GR1, VAR, GR2	; assign	left
+	PUSH	0, GR1	; assign	left
+	LD	GR2, =29	; assign	var	(a2)
+	POP	GR1	; assign
+	ST	GR1, VAR, GR2	; assign
+	; L25 if		; if
+	LD	GR2, =1	; if	left	var	(j)
+	LD	GR1, VAR, GR2	; if	left
+	PUSH	0, GR1	; if	left
+	LD	GR2, =0	; if	comp	left	var	(i)
+	LD	GR1, VAR, GR2	; if	comp	left
+	PUSH	0, GR1	; if	comp	left
+	POP	GR2	; if	comp
+	POP	GR1	; if	comp
+	CPA	GR1, GR2	; if	comp
+	JMI	TRUE0	; if	comp	comp-op
+	LD	GR1, =#FFFF	; if	comp	comp-op
+	JUMP	BOTH0	; if	comp	comp-op
+TRUE0	LD	GR1, =#0000	; if	comp	comp-op
+BOTH0	PUSH	0, GR1	; if	comp	comp-op
+	POP	GR1	; if
+	CPA	GR1, =#FFFF	; if
+	JZE	ELSE0	; if
+	; L27 assign		; if	then	assign
+	PUSH	3	; if	then	assign	const-uint	(3)
+	LD	GR2, =3	; if	then	assign	var	(l)
+	POP	GR1	; if	then	assign
+	ST	GR1, VAR, GR2	; if	then	assign
+ELSE0	NOP		; if
+	; L29 if		; if
+	LD	GR2, =2	; if	left	var	(k)
+	LD	GR1, VAR, GR2	; if	left
+	PUSH	0, GR1	; if	left
+	LD	GR2, =0	; if	comp	left	var	(i)
+	LD	GR1, VAR, GR2	; if	comp	left
+	PUSH	0, GR1	; if	comp	left
+	PUSH	7	; if	comp	addition	const-uint	(7)
+	POP	GR2	; if	comp	addition
+	POP	GR1	; if	comp	addition
+	SUBA	GR1, GR2	; if	comp	addition
+	PUSH	0, GR1	; if	comp	addition
+	POP	GR2	; if	comp
+	POP	GR1	; if	comp
+	CPA	GR1, GR2	; if	comp
+	JPL	TRUE1	; if	comp	comp-op
+	LD	GR1, =#0000	; if	comp	comp-op
+	JUMP	BOTH1	; if	comp	comp-op
+TRUE1	LD	GR1, =#FFFF	; if	comp	comp-op
+BOTH1	PUSH	0, GR1	; if	comp	comp-op
+	POP	GR1	; if
+	CPA	GR1, =#FFFF	; if
+	JZE	ELSE1	; if
+	; L31 assign		; if	then	assign
+	PUSH	4	; if	then	assign	const-uint	(4)
+	LD	GR2, =4	; if	then	assign	var	(m)
+	POP	GR1	; if	then	assign
+	ST	GR1, VAR, GR2	; if	then	assign
+ELSE1	NOP		; if
+	; L33 if		; if
+	LD	GR2, =2	; if	left	var	(k)
+	LD	GR1, VAR, GR2	; if	left
+	PUSH	0, GR1	; if	left
+	POP	GR2	; if	minus
+	LD	GR1, =0	; if	minus
+	SUBA	GR1, GR2	; if	minus
+	PUSH	0, GR1	; if	minus
+	PUSH	2	; if	addition	const-uint	(2)
+	POP	GR2	; if	addition
+	POP	GR1	; if	addition
+	SUBA	GR1, GR2	; if	addition
+	PUSH	0, GR1	; if	addition
+	PUSH	6	; if	comp	const-uint	(6)
+	POP	GR2	; if	comp
+	POP	GR1	; if	comp
+	CPA	GR1, GR2	; if	comp
+	JZE	TRUE2	; if	comp	comp-op
+	LD	GR1, =#FFFF	; if	comp	comp-op
+	JUMP	BOTH2	; if	comp	comp-op
+TRUE2	LD	GR1, =#0000	; if	comp	comp-op
+BOTH2	PUSH	0, GR1	; if	comp	comp-op
+	POP	GR1	; if
+	CPA	GR1, =#FFFF	; if
+	JZE	ELSE2	; if
+	; L35 assign		; if	then	assign
+	PUSH	5	; if	then	assign	const-uint	(5)
+	LD	GR2, =5	; if	then	assign	var	(n)
+	POP	GR1	; if	then	assign
+	ST	GR1, VAR, GR2	; if	then	assign
+ELSE2	NOP		; if
+	; L37 assign		; assign
+	LD	GR2, =3	; assign	left	var	(l)
+	LD	GR1, VAR, GR2	; assign	left
+	PUSH	0, GR1	; assign	left
+	LD	GR2, =30	; assign	var	(a3)
+	POP	GR1	; assign
+	ST	GR1, VAR, GR2	; assign
+	; L38 assign		; assign
+	LD	GR2, =4	; assign	left	var	(m)
+	LD	GR1, VAR, GR2	; assign	left
+	PUSH	0, GR1	; assign	left
+	LD	GR2, =31	; assign	var	(a4)
+	POP	GR1	; assign
+	ST	GR1, VAR, GR2	; assign
+	; L39 assign		; assign
+	LD	GR2, =5	; assign	left	var	(n)
+	LD	GR1, VAR, GR2	; assign	left
+	PUSH	0, GR1	; assign	left
+	LD	GR2, =32	; assign	var	(a5)
+	POP	GR1	; assign
+	ST	GR1, VAR, GR2	; assign
+	; L41 if		; if
+	LD	GR2, =0	; if	left	var	(i)
+	LD	GR1, VAR, GR2	; if	left
+	PUSH	0, GR1	; if	left
+	LD	GR2, =1	; if	comp	left	var	(j)
+	LD	GR1, VAR, GR2	; if	comp	left
+	PUSH	0, GR1	; if	comp	left
+	POP	GR2	; if	comp
+	POP	GR1	; if	comp
+	CPA	GR1, GR2	; if	comp
+	JPL	TRUE3	; if	comp	comp-op
+	LD	GR1, =#FFFF	; if	comp	comp-op
+	JUMP	BOTH3	; if	comp	comp-op
+TRUE3	LD	GR1, =#0000	; if	comp	comp-op
+BOTH3	PUSH	0, GR1	; if	comp	comp-op
+	POP	GR1	; if
+	CPA	GR1, =#FFFF	; if
+	JZE	ELSE3	; if
+	; L43 assign		; if	then	assign
+	PUSH	6	; if	then	assign	const-uint	(6)
+	LD	GR2, =3	; if	then	assign	var	(l)
+	POP	GR1	; if	then	assign
+	ST	GR1, VAR, GR2	; if	then	assign
+ELSE3	NOP		; if
+	; L45 if		; if
+	LD	GR2, =0	; if	left	var	(i)
+	LD	GR1, VAR, GR2	; if	left
+	PUSH	0, GR1	; if	left
+	LD	GR2, =2	; if	comp	left	var	(k)
+	LD	GR1, VAR, GR2	; if	comp	left
+	PUSH	0, GR1	; if	comp	left
+	PUSH	7	; if	comp	addition	const-uint	(7)
+	POP	GR2	; if	comp	addition
+	POP	GR1	; if	comp	addition
+	ADDA	GR1, GR2	; if	comp	addition
+	PUSH	0, GR1	; if	comp	addition
+	POP	GR2	; if	comp
+	POP	GR1	; if	comp
+	CPA	GR1, GR2	; if	comp
+	JMI	TRUE4	; if	comp	comp-op
+	LD	GR1, =#0000	; if	comp	comp-op
+	JUMP	BOTH4	; if	comp	comp-op
+TRUE4	LD	GR1, =#FFFF	; if	comp	comp-op
+BOTH4	PUSH	0, GR1	; if	comp	comp-op
+	POP	GR1	; if
+	CPA	GR1, =#FFFF	; if
+	JZE	ELSE4	; if
+	; L47 assign		; if	then	assign
+	PUSH	7	; if	then	assign	const-uint	(7)
+	LD	GR2, =4	; if	then	assign	var	(m)
+	POP	GR1	; if	then	assign
+	ST	GR1, VAR, GR2	; if	then	assign
+ELSE4	NOP		; if
+	; L49 if		; if
+	LD	GR2, =2	; if	left	var	(k)
+	LD	GR1, VAR, GR2	; if	left
+	PUSH	0, GR1	; if	left
+	POP	GR2	; if	minus
+	LD	GR1, =0	; if	minus
+	SUBA	GR1, GR2	; if	minus
+	PUSH	0, GR1	; if	minus
+	PUSH	2	; if	addition	const-uint	(2)
+	POP	GR2	; if	addition
+	POP	GR1	; if	addition
+	ADDA	GR1, GR2	; if	addition
+	PUSH	0, GR1	; if	addition
+	PUSH	5	; if	comp	const-uint	(5)
+	POP	GR2	; if	comp
+	POP	GR1	; if	comp
+	CPA	GR1, GR2	; if	comp
+	JNZ	TRUE5	; if	comp	comp-op
+	LD	GR1, =#FFFF	; if	comp	comp-op
+	JUMP	BOTH5	; if	comp	comp-op
+TRUE5	LD	GR1, =#0000	; if	comp	comp-op
+BOTH5	PUSH	0, GR1	; if	comp	comp-op
+	POP	GR1	; if
+	CPA	GR1, =#FFFF	; if
+	JZE	ELSE5	; if
+	; L51 assign		; if	then	assign
+	PUSH	8	; if	then	assign	const-uint	(8)
+	LD	GR2, =5	; if	then	assign	var	(n)
+	POP	GR1	; if	then	assign
+	ST	GR1, VAR, GR2	; if	then	assign
+ELSE5	NOP		; if
+	; L53 assign		; assign
+	LD	GR2, =3	; assign	left	var	(l)
+	LD	GR1, VAR, GR2	; assign	left
+	PUSH	0, GR1	; assign	left
+	LD	GR2, =33	; assign	var	(a6)
+	POP	GR1	; assign
+	ST	GR1, VAR, GR2	; assign
+	; L54 assign		; assign
+	LD	GR2, =4	; assign	left	var	(m)
+	LD	GR1, VAR, GR2	; assign	left
+	PUSH	0, GR1	; assign	left
+	LD	GR2, =34	; assign	var	(a7)
+	POP	GR1	; assign
+	ST	GR1, VAR, GR2	; assign
+	; L55 assign		; assign
+	LD	GR2, =5	; assign	left	var	(n)
+	LD	GR1, VAR, GR2	; assign	left
+	PUSH	0, GR1	; assign	left
+	LD	GR2, =35	; assign	var	(a8)
+	POP	GR1	; assign
+	ST	GR1, VAR, GR2	; assign
+	; L57 if		; if
+	LD	GR2, =0	; if	left	var	(i)
+	LD	GR1, VAR, GR2	; if	left
+	PUSH	0, GR1	; if	left
+	LD	GR2, =1	; if	multiple	left	var	(j)
+	LD	GR1, VAR, GR2	; if	multiple	left
+	PUSH	0, GR1	; if	multiple	left
+	POP	GR2	; if	multiple
+	POP	GR1	; if	multiple
+	CALL	MULT	; if	multiple
+	PUSH	0, GR2	; if	multiple
+	POP	GR2	; if	minus
+	LD	GR1, =0	; if	minus
+	SUBA	GR1, GR2	; if	minus
+	PUSH	0, GR1	; if	minus
+	LD	GR2, =1	; if	addition	left	var	(j)
+	LD	GR1, VAR, GR2	; if	addition	left
+	PUSH	0, GR1	; if	addition	left
+	PUSH	1	; if	addition	multiple	const-uint	(1)
+	POP	GR2	; if	addition	multiple
+	POP	GR1	; if	addition	multiple
+	CALL	MULT	; if	addition	multiple
+	PUSH	0, GR2	; if	addition	multiple
+	POP	GR2	; if	addition
+	POP	GR1	; if	addition
+	ADDA	GR1, GR2	; if	addition
+	PUSH	0, GR1	; if	addition
+	PUSH	2	; if	addition	const-uint	(2)
+	POP	GR2	; if	addition	minus
+	LD	GR1, =0	; if	addition	minus
+	SUBA	GR1, GR2	; if	addition	minus
+	PUSH	0, GR1	; if	addition	minus
+	LD	GR2, =0	; if	addition	multiple	left	var	(i)
+	LD	GR1, VAR, GR2	; if	addition	multiple	left
+	PUSH	0, GR1	; if	addition	multiple	left
+	POP	GR2	; if	addition	multiple
+	POP	GR1	; if	addition	multiple
+	CALL	MULT	; if	addition	multiple
+	PUSH	0, GR2	; if	addition	multiple
+	POP	GR2	; if	addition
+	POP	GR1	; if	addition
+	ADDA	GR1, GR2	; if	addition
+	PUSH	0, GR1	; if	addition
+	LD	GR2, =0	; if	addition	left	var	(i)
+	LD	GR1, VAR, GR2	; if	addition	left
+	PUSH	0, GR1	; if	addition	left
+	PUSH	3	; if	addition	multiple	const-uint	(3)
+	POP	GR2	; if	addition	multiple
+	POP	GR1	; if	addition	multiple
+	CALL	DIV	; if	addition	multiple
+	PUSH	0, GR2	; if	addition	multiple
+	POP	GR2	; if	addition	minus
+	LD	GR1, =0	; if	addition	minus
+	SUBA	GR1, GR2	; if	addition	minus
+	PUSH	0, GR1	; if	addition	minus
+	LD	GR2, =1	; if	addition	addition	left	var	(j)
+	LD	GR1, VAR, GR2	; if	addition	addition	left
+	PUSH	0, GR1	; if	addition	addition	left
+	PUSH	7	; if	addition	addition	multiple	const-uint	(7)
+	POP	GR2	; if	addition	addition	multiple
+	POP	GR1	; if	addition	addition	multiple
+	CALL	DIV	; if	addition	addition	multiple
+	PUSH	0, GR2	; if	addition	addition	multiple
+	POP	GR2	; if	addition	addition
+	POP	GR1	; if	addition	addition
+	SUBA	GR1, GR2	; if	addition	addition
+	PUSH	0, GR1	; if	addition	addition
+	LD	GR2, =2	; if	addition	addition	left	var	(k)
+	LD	GR1, VAR, GR2	; if	addition	addition	left
+	PUSH	0, GR1	; if	addition	addition	left
+	POP	GR2	; if	addition	addition	minus
+	LD	GR1, =0	; if	addition	addition	minus
+	SUBA	GR1, GR2	; if	addition	addition	minus
+	PUSH	0, GR1	; if	addition	addition	minus
+	PUSH	1	; if	addition	addition	multiple	const-uint	(1)
+	PUSH	2	; if	addition	addition	multiple	addition	const-uint	(2)
+	LD	GR2, =2	; if	addition	addition	multiple	addition	addition	left	var	(k)
+	LD	GR1, VAR, GR2	; if	addition	addition	multiple	addition	addition	left
+	PUSH	0, GR1	; if	addition	addition	multiple	addition	addition	left
+	LD	GR2, =0	; if	addition	addition	multiple	addition	addition	addition	left	var	(i)
+	LD	GR1, VAR, GR2	; if	addition	addition	multiple	addition	addition	addition	left
+	PUSH	0, GR1	; if	addition	addition	multiple	addition	addition	addition	left
+	POP	GR2	; if	addition	addition	multiple	addition	addition	addition
+	POP	GR1	; if	addition	addition	multiple	addition	addition	addition
+	ADDA	GR1, GR2	; if	addition	addition	multiple	addition	addition	addition
+	PUSH	0, GR1	; if	addition	addition	multiple	addition	addition	addition
+	POP	GR2	; if	addition	addition	multiple	addition	addition
+	POP	GR1	; if	addition	addition	multiple	addition	addition
+	ADDA	GR1, GR2	; if	addition	addition	multiple	addition	addition
+	PUSH	0, GR1	; if	addition	addition	multiple	addition	addition
+	POP	GR2	; if	addition	addition	multiple	addition
+	POP	GR1	; if	addition	addition	multiple	addition
+	ADDA	GR1, GR2	; if	addition	addition	multiple	addition
+	PUSH	0, GR1	; if	addition	addition	multiple	addition
+	PUSH	2	; if	addition	addition	multiple	addition	const-uint	(2)
+	POP	GR2	; if	addition	addition	multiple	addition
+	POP	GR1	; if	addition	addition	multiple	addition
+	SUBA	GR1, GR2	; if	addition	addition	multiple	addition
+	PUSH	0, GR1	; if	addition	addition	multiple	addition
+	POP	GR2	; if	addition	addition	multiple	minus
+	LD	GR1, =0	; if	addition	addition	multiple	minus
+	SUBA	GR1, GR2	; if	addition	addition	multiple	minus
+	PUSH	0, GR1	; if	addition	addition	multiple	minus
+	POP	GR2	; if	addition	addition	multiple
+	POP	GR1	; if	addition	addition	multiple
+	CALL	DIV	; if	addition	addition	multiple
+	PUSH	0, GR1	; if	addition	addition	multiple
+	POP	GR2	; if	addition	addition
+	POP	GR1	; if	addition	addition
+	ADDA	GR1, GR2	; if	addition	addition
+	PUSH	0, GR1	; if	addition	addition
+	POP	GR2	; if	addition
+	POP	GR1	; if	addition
+	SUBA	GR1, GR2	; if	addition
+	PUSH	0, GR1	; if	addition
+	PUSH	24	; if	comp	const-uint	(24)
+	POP	GR2	; if	comp
+	POP	GR1	; if	comp
+	CPA	GR1, GR2	; if	comp
+	JNZ	TRUE6	; if	comp	comp-op
+	LD	GR1, =#FFFF	; if	comp	comp-op
+	JUMP	BOTH6	; if	comp	comp-op
+TRUE6	LD	GR1, =#0000	; if	comp	comp-op
+BOTH6	PUSH	0, GR1	; if	comp	comp-op
+	POP	GR1	; if
+	CPA	GR1, =#FFFF	; if
+	JZE	ELSE6	; if
+	; L60 assign		; if	then	assign
+	PUSH	0	; if	then	assign	const-uint	(0)
+	LD	GR2, =3	; if	then	assign	var	(l)
+	POP	GR1	; if	then	assign
+	ST	GR1, VAR, GR2	; if	then	assign
+	JUMP	ENDIF0	; if
+ELSE6	NOP		; if	else
+	; L64 assign		; if	else	assign
+	PUSH	9	; if	else	assign	const-uint	(9)
+	LD	GR2, =3	; if	else	assign	var	(l)
+	POP	GR1	; if	else	assign
+	ST	GR1, VAR, GR2	; if	else	assign
+ENDIF0	NOP		; if	else
+	; L66 assign		; assign
+	LD	GR2, =3	; assign	left	var	(l)
+	LD	GR1, VAR, GR2	; assign	left
+	PUSH	0, GR1	; assign	left
+	LD	GR2, =36	; assign	var	(a9)
+	POP	GR1	; assign
+	ST	GR1, VAR, GR2	; assign
+	; L67 output		; output
+	LD	GR2, =27	; output	left	var	(a0)
+	LD	GR1, VAR, GR2	; output	left
+	PUSH	0, GR1	; output	left
+	POP	GR2	; output
+	CALL	WRTINT	; output
+	LD	GR2, =28	; output	left	var	(a1)
+	LD	GR1, VAR, GR2	; output	left
+	PUSH	0, GR1	; output	left
+	POP	GR2	; output
+	CALL	WRTINT	; output
+	LD	GR2, =29	; output	left	var	(a2)
+	LD	GR1, VAR, GR2	; output	left
+	PUSH	0, GR1	; output	left
+	POP	GR2	; output
+	CALL	WRTINT	; output
+	LD	GR2, =30	; output	left	var	(a3)
+	LD	GR1, VAR, GR2	; output	left
+	PUSH	0, GR1	; output	left
+	POP	GR2	; output
+	CALL	WRTINT	; output
+	LD	GR2, =31	; output	left	var	(a4)
+	LD	GR1, VAR, GR2	; output	left
+	PUSH	0, GR1	; output	left
+	POP	GR2	; output
+	CALL	WRTINT	; output
+	LD	GR2, =32	; output	left	var	(a5)
+	LD	GR1, VAR, GR2	; output	left
+	PUSH	0, GR1	; output	left
+	POP	GR2	; output
+	CALL	WRTINT	; output
+	LD	GR2, =33	; output	left	var	(a6)
+	LD	GR1, VAR, GR2	; output	left
+	PUSH	0, GR1	; output	left
+	POP	GR2	; output
+	CALL	WRTINT	; output
+	LD	GR2, =34	; output	left	var	(a7)
+	LD	GR1, VAR, GR2	; output	left
+	PUSH	0, GR1	; output	left
+	POP	GR2	; output
+	CALL	WRTINT	; output
+	LD	GR2, =35	; output	left	var	(a8)
+	LD	GR1, VAR, GR2	; output	left
+	PUSH	0, GR1	; output	left
+	POP	GR2	; output
+	CALL	WRTINT	; output
+	LD	GR2, =36	; output	left	var	(a9)
+	LD	GR1, VAR, GR2	; output	left
+	PUSH	0, GR1	; output	left
+	POP	GR2	; output
+	CALL	WRTINT	; output
+	CALL	WRTLN	; output
+	; L70 assign		; assign
+	LD	GR2, =1	; assign	left	var	(j)
+	LD	GR1, VAR, GR2	; assign	left
+	PUSH	0, GR1	; assign	left
+	LD	GR2, =0	; assign	comp	left	var	(i)
+	LD	GR1, VAR, GR2	; assign	comp	left
+	PUSH	0, GR1	; assign	comp	left
+	POP	GR2	; assign	comp
+	POP	GR1	; assign	comp
+	CPA	GR1, GR2	; assign	comp
+	JMI	TRUE7	; assign	comp	comp-op
+	LD	GR1, =#FFFF	; assign	comp	comp-op
+	JUMP	BOTH7	; assign	comp	comp-op
+TRUE7	LD	GR1, =#0000	; assign	comp	comp-op
+BOTH7	PUSH	0, GR1	; assign	comp	comp-op
+	LD	GR2, =10	; assign	var	(ba)
+	POP	GR1	; assign
+	ST	GR1, VAR, GR2	; assign
+	; L71 if		; if
+	LD	GR2, =10	; if	left	var	(ba)
+	LD	GR1, VAR, GR2	; if	left
+	PUSH	0, GR1	; if	left
+	LD	GR2, =2	; if	multiple	left	var	(k)
+	LD	GR1, VAR, GR2	; if	multiple	left
+	PUSH	0, GR1	; if	multiple	left
+	PUSH	0	; if	multiple	comp	const-uint	(0)
+	POP	GR2	; if	multiple	comp
+	POP	GR1	; if	multiple	comp
+	CPA	GR1, GR2	; if	multiple	comp
+	JMI	TRUE8	; if	multiple	comp	comp-op
+	LD	GR1, =#FFFF	; if	multiple	comp	comp-op
+	JUMP	BOTH8	; if	multiple	comp	comp-op
+TRUE8	LD	GR1, =#0000	; if	multiple	comp	comp-op
+BOTH8	PUSH	0, GR1	; if	multiple	comp	comp-op
+	POP	GR2	; if	multiple
+	POP	GR1	; if	multiple
+	AND	GR1, GR2	; if	multiple
+	PUSH	0, GR1	; if	multiple
+	POP	GR1	; if
+	CPA	GR1, =#FFFF	; if
+	JZE	ELSE7	; if
+	; L73 assign		; if	then	assign
+	PUSH	0	; if	then	assign	const-uint	(0)
+	LD	GR2, =3	; if	then	assign	var	(l)
+	POP	GR1	; if	then	assign
+	ST	GR1, VAR, GR2	; if	then	assign
+ELSE7	NOP		; if
+	; L75 if		; if
+	LD	GR2, =10	; if	left	var	(ba)
+	LD	GR1, VAR, GR2	; if	left
+	PUSH	0, GR1	; if	left
+	LD	GR2, =2	; if	comp	left	var	(k)
+	LD	GR1, VAR, GR2	; if	comp	left
+	PUSH	0, GR1	; if	comp	left
+	PUSH	0	; if	comp	comp	const-uint	(0)
+	POP	GR2	; if	comp	comp
+	POP	GR1	; if	comp	comp
+	CPA	GR1, GR2	; if	comp	comp
+	JMI	TRUE9	; if	comp	comp	comp-op
+	LD	GR1, =#FFFF	; if	comp	comp	comp-op
+	JUMP	BOTH9	; if	comp	comp	comp-op
+TRUE9	LD	GR1, =#0000	; if	comp	comp	comp-op
+BOTH9	PUSH	0, GR1	; if	comp	comp	comp-op
+	POP	GR2	; if	comp
+	POP	GR1	; if	comp
+	CPA	GR1, GR2	; if	comp
+	JZE	TRUE10	; if	comp	comp-op
+	LD	GR1, =#FFFF	; if	comp	comp-op
+	JUMP	BOTH10	; if	comp	comp-op
+TRUE10	LD	GR1, =#0000	; if	comp	comp-op
+BOTH10	PUSH	0, GR1	; if	comp	comp-op
+	POP	GR1	; if
+	CPA	GR1, =#FFFF	; if
+	JZE	ELSE8	; if
+	; L77 assign		; if	then	assign
+	PUSH	1	; if	then	assign	const-uint	(1)
+	LD	GR2, =4	; if	then	assign	var	(m)
+	POP	GR1	; if	then	assign
+	ST	GR1, VAR, GR2	; if	then	assign
+ELSE8	NOP		; if
+	; L79 if		; if
+	PUSH	#0000	; if	const-bool
+	LD	GR2, =10	; if	comp	left	var	(ba)
+	LD	GR1, VAR, GR2	; if	comp	left
+	PUSH	0, GR1	; if	comp	left
+	POP	GR2	; if	comp
+	POP	GR1	; if	comp
+	CPA	GR1, GR2	; if	comp
+	JPL	TRUE11	; if	comp	comp-op
+	LD	GR1, =#0000	; if	comp	comp-op
+	JUMP	BOTH11	; if	comp	comp-op
+TRUE11	LD	GR1, =#FFFF	; if	comp	comp-op
+BOTH11	PUSH	0, GR1	; if	comp	comp-op
+	POP	GR1	; if
+	CPA	GR1, =#FFFF	; if
+	JZE	ELSE9	; if
+	; L81 assign		; if	then	assign
+	PUSH	2	; if	then	assign	const-uint	(2)
+	LD	GR2, =5	; if	then	assign	var	(n)
+	POP	GR1	; if	then	assign
+	ST	GR1, VAR, GR2	; if	then	assign
+ELSE9	NOP		; if
+	; L83 assign		; assign
+	LD	GR2, =3	; assign	left	var	(l)
+	LD	GR1, VAR, GR2	; assign	left
+	PUSH	0, GR1	; assign	left
+	LD	GR2, =27	; assign	var	(a0)
+	POP	GR1	; assign
+	ST	GR1, VAR, GR2	; assign
+	; L84 assign		; assign
+	LD	GR2, =4	; assign	left	var	(m)
+	LD	GR1, VAR, GR2	; assign	left
+	PUSH	0, GR1	; assign	left
+	LD	GR2, =28	; assign	var	(a1)
+	POP	GR1	; assign
+	ST	GR1, VAR, GR2	; assign
+	; L85 assign		; assign
+	LD	GR2, =5	; assign	left	var	(n)
+	LD	GR1, VAR, GR2	; assign	left
+	PUSH	0, GR1	; assign	left
+	LD	GR2, =29	; assign	var	(a2)
+	POP	GR1	; assign
+	ST	GR1, VAR, GR2	; assign
+	; L87 if		; if
+	LD	GR2, =13	; if	left	var	(bf)
+	LD	GR1, VAR, GR2	; if	left
+	PUSH	0, GR1	; if	left
+	LD	GR2, =12	; if	comp	left	var	(bt)
+	LD	GR1, VAR, GR2	; if	comp	left
+	PUSH	0, GR1	; if	comp	left
+	POP	GR2	; if	comp
+	POP	GR1	; if	comp
+	CPA	GR1, GR2	; if	comp
+	JMI	TRUE12	; if	comp	comp-op
+	LD	GR1, =#FFFF	; if	comp	comp-op
+	JUMP	BOTH12	; if	comp	comp-op
+TRUE12	LD	GR1, =#0000	; if	comp	comp-op
+BOTH12	PUSH	0, GR1	; if	comp	comp-op
+	POP	GR1	; if
+	CPA	GR1, =#FFFF	; if
+	JZE	ELSE10	; if
+	; L89 assign		; if	then	assign
+	PUSH	3	; if	then	assign	const-uint	(3)
+	LD	GR2, =3	; if	then	assign	var	(l)
+	POP	GR1	; if	then	assign
+	ST	GR1, VAR, GR2	; if	then	assign
+ELSE10	NOP		; if
+	; L91 if		; if
+	LD	GR2, =10	; if	left	var	(ba)
+	LD	GR1, VAR, GR2	; if	left
+	PUSH	0, GR1	; if	left
+	LD	GR2, =12	; if	multiple	left	var	(bt)
+	LD	GR1, VAR, GR2	; if	multiple	left
+	PUSH	0, GR1	; if	multiple	left
+	POP	GR2	; if	multiple
+	POP	GR1	; if	multiple
+	AND	GR1, GR2	; if	multiple
+	PUSH	0, GR1	; if	multiple
+	POP	GR1	; if
+	XOR	GR1, =#FFFF	; if
+	PUSH	0, GR1	; if
+	LD	GR2, =13	; if	addition	left	var	(bf)
+	LD	GR1, VAR, GR2	; if	addition	left
+	PUSH	0, GR1	; if	addition	left
+	POP	GR2	; if	addition
+	POP	GR1	; if	addition
+	OR	GR1, GR2	; if	addition
+	PUSH	0, GR1	; if	addition
+	POP	GR1	; if
+	XOR	GR1, =#FFFF	; if
+	PUSH	0, GR1	; if
+	POP	GR1	; if
+	CPA	GR1, =#FFFF	; if
+	JZE	ELSE11	; if
+	; L93 assign		; if	then	assign
+	PUSH	4	; if	then	assign	const-uint	(4)
+	LD	GR2, =4	; if	then	assign	var	(m)
+	POP	GR1	; if	then	assign
+	ST	GR1, VAR, GR2	; if	then	assign
+ELSE11	NOP		; if
+	; L95 if		; if
+	PUSH	#0000	; if	const-bool
+	PUSH	#FFFF	; if	addition	const-bool
+	POP	GR2	; if	addition
+	POP	GR1	; if	addition
+	OR	GR1, GR2	; if	addition
+	PUSH	0, GR1	; if	addition
+	PUSH	#0000	; if	multiple	const-bool
+	PUSH	#FFFF	; if	multiple	comp	const-bool
+	POP	GR2	; if	multiple	comp
+	POP	GR1	; if	multiple	comp
+	CPA	GR1, GR2	; if	multiple	comp
+	JNZ	TRUE13	; if	multiple	comp	comp-op
+	LD	GR1, =#FFFF	; if	multiple	comp	comp-op
+	JUMP	BOTH13	; if	multiple	comp	comp-op
+TRUE13	LD	GR1, =#0000	; if	multiple	comp	comp-op
+BOTH13	PUSH	0, GR1	; if	multiple	comp	comp-op
+	POP	GR2	; if	multiple
+	POP	GR1	; if	multiple
+	AND	GR1, GR2	; if	multiple
+	PUSH	0, GR1	; if	multiple
+	POP	GR1	; if
+	CPA	GR1, =#FFFF	; if
+	JZE	ELSE12	; if
+	; L97 assign		; if	then	assign
+	PUSH	5	; if	then	assign	const-uint	(5)
+	LD	GR2, =5	; if	then	assign	var	(n)
+	POP	GR1	; if	then	assign
+	ST	GR1, VAR, GR2	; if	then	assign
+ELSE12	NOP		; if
+	; L99 assign		; assign
+	LD	GR2, =3	; assign	left	var	(l)
+	LD	GR1, VAR, GR2	; assign	left
+	PUSH	0, GR1	; assign	left
+	LD	GR2, =30	; assign	var	(a3)
+	POP	GR1	; assign
+	ST	GR1, VAR, GR2	; assign
+	; L100 assign		; assign
+	LD	GR2, =4	; assign	left	var	(m)
+	LD	GR1, VAR, GR2	; assign	left
+	PUSH	0, GR1	; assign	left
+	LD	GR2, =31	; assign	var	(a4)
+	POP	GR1	; assign
+	ST	GR1, VAR, GR2	; assign
+	; L101 assign		; assign
+	LD	GR2, =5	; assign	left	var	(n)
+	LD	GR1, VAR, GR2	; assign	left
+	PUSH	0, GR1	; assign	left
+	LD	GR2, =32	; assign	var	(a5)
+	POP	GR1	; assign
+	ST	GR1, VAR, GR2	; assign
+	; L103 if		; if
+	LD	GR2, =6	; if	left	var	(ca)
+	LD	GR1, VAR, GR2	; if	left
+	PUSH	0, GR1	; if	left
+	LD	GR2, =7	; if	comp	left	var	(cb)
+	LD	GR1, VAR, GR2	; if	comp	left
+	PUSH	0, GR1	; if	comp	left
+	POP	GR2	; if	comp
+	POP	GR1	; if	comp
+	CPA	GR1, GR2	; if	comp
+	JPL	TRUE14	; if	comp	comp-op
+	LD	GR1, =#0000	; if	comp	comp-op
+	JUMP	BOTH14	; if	comp	comp-op
+TRUE14	LD	GR1, =#FFFF	; if	comp	comp-op
+BOTH14	PUSH	0, GR1	; if	comp	comp-op
+	POP	GR1	; if
+	CPA	GR1, =#FFFF	; if
+	JZE	ELSE13	; if
+	; L105 assign		; if	then	assign
+	PUSH	6	; if	then	assign	const-uint	(6)
+	LD	GR2, =3	; if	then	assign	var	(l)
+	POP	GR1	; if	then	assign
+	ST	GR1, VAR, GR2	; if	then	assign
+ELSE13	NOP		; if
+	; L107 if		; if
+	LD	GR2, =6	; if	left	var	(ca)
+	LD	GR1, VAR, GR2	; if	left
+	PUSH	0, GR1	; if	left
+	LD	GR1, ='A'	; if	comp	const-str	('A')
+	PUSH	0, GR1	; if	comp	const-str
+	POP	GR2	; if	comp
+	POP	GR1	; if	comp
+	CPA	GR1, GR2	; if	comp
+	JZE	TRUE15	; if	comp	comp-op
+	LD	GR1, =#FFFF	; if	comp	comp-op
+	JUMP	BOTH15	; if	comp	comp-op
+TRUE15	LD	GR1, =#0000	; if	comp	comp-op
+BOTH15	PUSH	0, GR1	; if	comp	comp-op
+	POP	GR1	; if
+	CPA	GR1, =#FFFF	; if
+	JZE	ELSE14	; if
+	; L109 assign		; if	then	assign
+	PUSH	7	; if	then	assign	const-uint	(7)
+	LD	GR2, =4	; if	then	assign	var	(m)
+	POP	GR1	; if	then	assign
+	ST	GR1, VAR, GR2	; if	then	assign
+ELSE14	NOP		; if
+	; L111 if		; if
+	LD	GR2, =7	; if	left	var	(cb)
+	LD	GR1, VAR, GR2	; if	left
+	PUSH	0, GR1	; if	left
+	LD	GR1, ='b'	; if	comp	const-str	('b')
+	PUSH	0, GR1	; if	comp	const-str
+	POP	GR2	; if	comp
+	POP	GR1	; if	comp
+	CPA	GR1, GR2	; if	comp
+	JNZ	TRUE16	; if	comp	comp-op
+	LD	GR1, =#FFFF	; if	comp	comp-op
+	JUMP	BOTH16	; if	comp	comp-op
+TRUE16	LD	GR1, =#0000	; if	comp	comp-op
+BOTH16	PUSH	0, GR1	; if	comp	comp-op
+	POP	GR1	; if
+	XOR	GR1, =#FFFF	; if
+	PUSH	0, GR1	; if
+	POP	GR1	; if
+	CPA	GR1, =#FFFF	; if
+	JZE	ELSE15	; if
+	; L113 assign		; if	then	assign
+	PUSH	8	; if	then	assign	const-uint	(8)
+	LD	GR2, =5	; if	then	assign	var	(n)
+	POP	GR1	; if	then	assign
+	ST	GR1, VAR, GR2	; if	then	assign
+ELSE15	NOP		; if
+	; L115 assign		; assign
+	LD	GR2, =3	; assign	left	var	(l)
+	LD	GR1, VAR, GR2	; assign	left
+	PUSH	0, GR1	; assign	left
+	LD	GR2, =33	; assign	var	(a6)
+	POP	GR1	; assign
+	ST	GR1, VAR, GR2	; assign
+	; L116 assign		; assign
+	LD	GR2, =4	; assign	left	var	(m)
+	LD	GR1, VAR, GR2	; assign	left
+	PUSH	0, GR1	; assign	left
+	LD	GR2, =34	; assign	var	(a7)
+	POP	GR1	; assign
+	ST	GR1, VAR, GR2	; assign
+	; L117 assign		; assign
+	LD	GR2, =5	; assign	left	var	(n)
+	LD	GR1, VAR, GR2	; assign	left
+	PUSH	0, GR1	; assign	left
+	LD	GR2, =35	; assign	var	(a8)
+	POP	GR1	; assign
+	ST	GR1, VAR, GR2	; assign
+	; L118 output		; output
+	LD	GR2, =27	; output	left	var	(a0)
+	LD	GR1, VAR, GR2	; output	left
+	PUSH	0, GR1	; output	left
+	POP	GR2	; output
+	CALL	WRTINT	; output
+	LD	GR2, =28	; output	left	var	(a1)
+	LD	GR1, VAR, GR2	; output	left
+	PUSH	0, GR1	; output	left
+	POP	GR2	; output
+	CALL	WRTINT	; output
+	LD	GR2, =29	; output	left	var	(a2)
+	LD	GR1, VAR, GR2	; output	left
+	PUSH	0, GR1	; output	left
+	POP	GR2	; output
+	CALL	WRTINT	; output
+	LD	GR2, =30	; output	left	var	(a3)
+	LD	GR1, VAR, GR2	; output	left
+	PUSH	0, GR1	; output	left
+	POP	GR2	; output
+	CALL	WRTINT	; output
+	LD	GR2, =31	; output	left	var	(a4)
+	LD	GR1, VAR, GR2	; output	left
+	PUSH	0, GR1	; output	left
+	POP	GR2	; output
+	CALL	WRTINT	; output
+	LD	GR2, =32	; output	left	var	(a5)
+	LD	GR1, VAR, GR2	; output	left
+	PUSH	0, GR1	; output	left
+	POP	GR2	; output
+	CALL	WRTINT	; output
+	LD	GR2, =33	; output	left	var	(a6)
+	LD	GR1, VAR, GR2	; output	left
+	PUSH	0, GR1	; output	left
+	POP	GR2	; output
+	CALL	WRTINT	; output
+	LD	GR2, =34	; output	left	var	(a7)
+	LD	GR1, VAR, GR2	; output	left
+	PUSH	0, GR1	; output	left
+	POP	GR2	; output
+	CALL	WRTINT	; output
+	LD	GR2, =35	; output	left	var	(a8)
+	LD	GR1, VAR, GR2	; output	left
+	PUSH	0, GR1	; output	left
+	POP	GR2	; output
+	CALL	WRTINT	; output
+	LD	GR1, ='9'	; output	const-str	('9')
+	PUSH	0, GR1	; output	const-str
+	POP	GR2	; output
+	CALL	WRTCH	; output
+	CALL	WRTLN	; output
+	; L120 assign		; assign
+	PUSH	1	; assign	const-uint	(1)
+	LD	GR2, =5	; assign	var	(n)
+	POP	GR1	; assign
+	ST	GR1, VAR, GR2	; assign
+	; L121 while		; while
+LOOP0	NOP		; while
+	LD	GR2, =5	; while	left	var	(n)
+	LD	GR1, VAR, GR2	; while	left
+	PUSH	0, GR1	; while	left
+	PUSH	13	; while	comp	const-uint	(13)
+	POP	GR2	; while	comp
+	POP	GR1	; while	comp
+	CPA	GR1, GR2	; while	comp
+	JPL	TRUE17	; while	comp	comp-op
+	LD	GR1, =#0000	; while	comp	comp-op
+	JUMP	BOTH17	; while	comp	comp-op
+TRUE17	LD	GR1, =#FFFF	; while	comp	comp-op
+BOTH17	PUSH	0, GR1	; while	comp	comp-op
+	POP	GR1	; while
+	CPL	GR1, =#FFFF	; while
+	JZE	ENDLP0	; while
+	; L123 assign		; while	assign
+	LD	GR2, =7	; while	assign	left	var	(cb)
+	LD	GR1, VAR, GR2	; while	assign	left
+	PUSH	0, GR1	; while	assign	left
+	LD	GR2, =5	; while	assign	var	idx	left	var	(n)
+	LD	GR1, VAR, GR2	; while	assign	var	idx	left
+	PUSH	0, GR1	; while	assign	var	idx	left
+	POP	GR2	; while	assign	var	idx
+	ADDA	GR2, =13	; while	assign	var
+	POP	GR1	; while	assign
+	ST	GR1, VAR, GR2	; while	assign
+	; L124 assign		; while	assign
+	LD	GR2, =5	; while	assign	left	var	(n)
+	LD	GR1, VAR, GR2	; while	assign	left
+	PUSH	0, GR1	; while	assign	left
+	PUSH	1	; while	assign	addition	const-uint	(1)
+	POP	GR2	; while	assign	addition
+	POP	GR1	; while	assign	addition
+	ADDA	GR1, GR2	; while	assign	addition
+	PUSH	0, GR1	; while	assign	addition
+	LD	GR2, =5	; while	assign	var	(n)
+	POP	GR1	; while	assign
+	ST	GR1, VAR, GR2	; while	assign
+	JUMP	LOOP0	; while
+ENDLP0	NOP		; while
+	; L127 assign		; assign
+	PUSH	1	; assign	const-uint	(1)
+	LD	GR2, =5	; assign	var	(n)
+	POP	GR1	; assign
+	ST	GR1, VAR, GR2	; assign
+	; L129 while		; while
+LOOP1	NOP		; while
+	LD	GR2, =5	; while	left	var	(n)
+	LD	GR1, VAR, GR2	; while	left
+	PUSH	0, GR1	; while	left
+	PUSH	13	; while	comp	const-uint	(13)
+	POP	GR2	; while	comp
+	POP	GR1	; while	comp
+	CPA	GR1, GR2	; while	comp
+	JPL	TRUE18	; while	comp	comp-op
+	LD	GR1, =#0000	; while	comp	comp-op
+	JUMP	BOTH18	; while	comp	comp-op
+TRUE18	LD	GR1, =#FFFF	; while	comp	comp-op
+BOTH18	PUSH	0, GR1	; while	comp	comp-op
+	POP	GR1	; while
+	CPL	GR1, =#FFFF	; while
+	JZE	ENDLP1	; while
+	; L131 if		; while	if
+	LD	GR2, =5	; while	if	left	var	(n)
+	LD	GR1, VAR, GR2	; while	if	left
+	PUSH	0, GR1	; while	if	left
+	PUSH	5	; while	if	comp	const-uint	(5)
+	POP	GR2	; while	if	comp
+	POP	GR1	; while	if	comp
+	CPA	GR1, GR2	; while	if	comp
+	JMI	TRUE19	; while	if	comp	comp-op
+	LD	GR1, =#FFFF	; while	if	comp	comp-op
+	JUMP	BOTH19	; while	if	comp	comp-op
+TRUE19	LD	GR1, =#0000	; while	if	comp	comp-op
+BOTH19	PUSH	0, GR1	; while	if	comp	comp-op
+	POP	GR1	; while	if
+	CPA	GR1, =#FFFF	; while	if
+	JZE	ELSE16	; while	if
+	; L133 if		; while	if	then	if
+	LD	GR2, =5	; while	if	then	if	left	var	(n)
+	LD	GR1, VAR, GR2	; while	if	then	if	left
+	PUSH	0, GR1	; while	if	then	if	left
+	PUSH	3	; while	if	then	if	comp	const-uint	(3)
+	POP	GR2	; while	if	then	if	comp
+	POP	GR1	; while	if	then	if	comp
+	CPA	GR1, GR2	; while	if	then	if	comp
+	JMI	TRUE20	; while	if	then	if	comp	comp-op
+	LD	GR1, =#FFFF	; while	if	then	if	comp	comp-op
+	JUMP	BOTH20	; while	if	then	if	comp	comp-op
+TRUE20	LD	GR1, =#0000	; while	if	then	if	comp	comp-op
+BOTH20	PUSH	0, GR1	; while	if	then	if	comp	comp-op
+	POP	GR1	; while	if	then	if
+	CPA	GR1, =#FFFF	; while	if	then	if
+	JZE	ELSE17	; while	if	then	if
+	; L135 assign		; while	if	then	if	then	assign
+	LD	GR2, =6	; while	if	then	if	then	assign	left	var	(ca)
+	LD	GR1, VAR, GR2	; while	if	then	if	then	assign	left
+	PUSH	0, GR1	; while	if	then	if	then	assign	left
+	LD	GR2, =5	; while	if	then	if	then	assign	var	idx	left	var	(n)
+	LD	GR1, VAR, GR2	; while	if	then	if	then	assign	var	idx	left
+	PUSH	0, GR1	; while	if	then	if	then	assign	var	idx	left
+	POP	GR2	; while	if	then	if	then	assign	var	idx
+	ADDA	GR2, =13	; while	if	then	if	then	assign	var
+	POP	GR1	; while	if	then	if	then	assign
+	ST	GR1, VAR, GR2	; while	if	then	if	then	assign
+	JUMP	ENDIF1	; while	if	then	if
+ELSE17	NOP		; while	if	then	if	else
+	; L139 assign		; while	if	then	if	else	assign
+	LD	GR1, ='B'	; while	if	then	if	else	assign	const-str	('B')
+	PUSH	0, GR1	; while	if	then	if	else	assign	const-str
+	LD	GR2, =5	; while	if	then	if	else	assign	var	idx	left	var	(n)
+	LD	GR1, VAR, GR2	; while	if	then	if	else	assign	var	idx	left
+	PUSH	0, GR1	; while	if	then	if	else	assign	var	idx	left
+	POP	GR2	; while	if	then	if	else	assign	var	idx
+	ADDA	GR2, =13	; while	if	then	if	else	assign	var
+	POP	GR1	; while	if	then	if	else	assign
+	ST	GR1, VAR, GR2	; while	if	then	if	else	assign
+ENDIF1	NOP		; while	if	then	if	else
+	JUMP	ENDIF2	; while	if
+ELSE16	NOP		; while	if	else
+	; L144 assign		; while	if	else	assign
+	LD	GR1, ='C'	; while	if	else	assign	const-str	('C')
+	PUSH	0, GR1	; while	if	else	assign	const-str
+	LD	GR2, =5	; while	if	else	assign	var	idx	left	var	(n)
+	LD	GR1, VAR, GR2	; while	if	else	assign	var	idx	left
+	PUSH	0, GR1	; while	if	else	assign	var	idx	left
+	POP	GR2	; while	if	else	assign	var	idx
+	ADDA	GR2, =13	; while	if	else	assign	var
+	POP	GR1	; while	if	else	assign
+	ST	GR1, VAR, GR2	; while	if	else	assign
+ENDIF2	NOP		; while	if	else
+	; L147 assign		; while	assign
+	LD	GR1, ='D'	; while	assign	const-str	('D')
+	PUSH	0, GR1	; while	assign	const-str
+	LD	GR2, =9	; while	assign	var	(cd)
+	POP	GR1	; while	assign
+	ST	GR1, VAR, GR2	; while	assign
+	; L149 if		; while	if
+	LD	GR2, =5	; while	if	left	var	(n)
+	LD	GR1, VAR, GR2	; while	if	left
+	PUSH	0, GR1	; while	if	left
+	PUSH	7	; while	if	comp	const-uint	(7)
+	POP	GR2	; while	if	comp
+	POP	GR1	; while	if	comp
+	CPA	GR1, GR2	; while	if	comp
+	JMI	TRUE21	; while	if	comp	comp-op
+	LD	GR1, =#0000	; while	if	comp	comp-op
+	JUMP	BOTH21	; while	if	comp	comp-op
+TRUE21	LD	GR1, =#FFFF	; while	if	comp	comp-op
+BOTH21	PUSH	0, GR1	; while	if	comp	comp-op
+	POP	GR1	; while	if
+	CPA	GR1, =#FFFF	; while	if
+	JZE	ELSE18	; while	if
+	; L151 if		; while	if	then	if
+	LD	GR2, =5	; while	if	then	if	left	var	(n)
+	LD	GR1, VAR, GR2	; while	if	then	if	left
+	PUSH	0, GR1	; while	if	then	if	left
+	PUSH	11	; while	if	then	if	comp	const-uint	(11)
+	POP	GR2	; while	if	then	if	comp
+	POP	GR1	; while	if	then	if	comp
+	CPA	GR1, GR2	; while	if	then	if	comp
+	JMI	TRUE22	; while	if	then	if	comp	comp-op
+	LD	GR1, =#FFFF	; while	if	then	if	comp	comp-op
+	JUMP	BOTH22	; while	if	then	if	comp	comp-op
+TRUE22	LD	GR1, =#0000	; while	if	then	if	comp	comp-op
+BOTH22	PUSH	0, GR1	; while	if	then	if	comp	comp-op
+	POP	GR1	; while	if	then	if
+	CPA	GR1, =#FFFF	; while	if	then	if
+	JZE	ELSE19	; while	if	then	if
+	; L153 if		; while	if	then	if	then	if
+	LD	GR2, =5	; while	if	then	if	then	if	left	var	(n)
+	LD	GR1, VAR, GR2	; while	if	then	if	then	if	left
+	PUSH	0, GR1	; while	if	then	if	then	if	left
+	PUSH	9	; while	if	then	if	then	if	comp	const-uint	(9)
+	POP	GR2	; while	if	then	if	then	if	comp
+	POP	GR1	; while	if	then	if	then	if	comp
+	CPA	GR1, GR2	; while	if	then	if	then	if	comp
+	JMI	TRUE23	; while	if	then	if	then	if	comp	comp-op
+	LD	GR1, =#FFFF	; while	if	then	if	then	if	comp	comp-op
+	JUMP	BOTH23	; while	if	then	if	then	if	comp	comp-op
+TRUE23	LD	GR1, =#0000	; while	if	then	if	then	if	comp	comp-op
+BOTH23	PUSH	0, GR1	; while	if	then	if	then	if	comp	comp-op
+	POP	GR1	; while	if	then	if	then	if
+	CPA	GR1, =#FFFF	; while	if	then	if	then	if
+	JZE	ELSE20	; while	if	then	if	then	if
+	; L155 assign		; while	if	then	if	then	if	then	assign
+	LD	GR2, =9	; while	if	then	if	then	if	then	assign	left	var	(cd)
+	LD	GR1, VAR, GR2	; while	if	then	if	then	if	then	assign	left
+	PUSH	0, GR1	; while	if	then	if	then	if	then	assign	left
+	LD	GR2, =5	; while	if	then	if	then	if	then	assign	var	idx	left	var	(n)
+	LD	GR1, VAR, GR2	; while	if	then	if	then	if	then	assign	var	idx	left
+	PUSH	0, GR1	; while	if	then	if	then	if	then	assign	var	idx	left
+	POP	GR2	; while	if	then	if	then	if	then	assign	var	idx
+	ADDA	GR2, =13	; while	if	then	if	then	if	then	assign	var
+	POP	GR1	; while	if	then	if	then	if	then	assign
+	ST	GR1, VAR, GR2	; while	if	then	if	then	if	then	assign
+	JUMP	ENDIF3	; while	if	then	if	then	if
+ELSE20	NOP		; while	if	then	if	then	if	else
+	; L159 assign		; while	if	then	if	then	if	else	assign
+	LD	GR1, ='E'	; while	if	then	if	then	if	else	assign	const-str	('E')
+	PUSH	0, GR1	; while	if	then	if	then	if	else	assign	const-str
+	LD	GR2, =5	; while	if	then	if	then	if	else	assign	var	idx	left	var	(n)
+	LD	GR1, VAR, GR2	; while	if	then	if	then	if	else	assign	var	idx	left
+	PUSH	0, GR1	; while	if	then	if	then	if	else	assign	var	idx	left
+	POP	GR2	; while	if	then	if	then	if	else	assign	var	idx
+	ADDA	GR2, =13	; while	if	then	if	then	if	else	assign	var
+	POP	GR1	; while	if	then	if	then	if	else	assign
+	ST	GR1, VAR, GR2	; while	if	then	if	then	if	else	assign
+ENDIF3	NOP		; while	if	then	if	then	if	else
+	JUMP	ENDIF4	; while	if	then	if
+ELSE19	NOP		; while	if	then	if	else
+	; L164 if		; while	if	then	if	else	if
+	LD	GR2, =5	; while	if	then	if	else	if	left	var	(n)
+	LD	GR1, VAR, GR2	; while	if	then	if	else	if	left
+	PUSH	0, GR1	; while	if	then	if	else	if	left
+	PUSH	12	; while	if	then	if	else	if	comp	const-uint	(12)
+	POP	GR2	; while	if	then	if	else	if	comp
+	POP	GR1	; while	if	then	if	else	if	comp
+	CPA	GR1, GR2	; while	if	then	if	else	if	comp
+	JPL	TRUE24	; while	if	then	if	else	if	comp	comp-op
+	LD	GR1, =#0000	; while	if	then	if	else	if	comp	comp-op
+	JUMP	BOTH24	; while	if	then	if	else	if	comp	comp-op
+TRUE24	LD	GR1, =#FFFF	; while	if	then	if	else	if	comp	comp-op
+BOTH24	PUSH	0, GR1	; while	if	then	if	else	if	comp	comp-op
+	POP	GR1	; while	if	then	if	else	if
+	CPA	GR1, =#FFFF	; while	if	then	if	else	if
+	JZE	ELSE21	; while	if	then	if	else	if
+	; L166 assign		; while	if	then	if	else	if	then	assign
+	LD	GR1, ='f'	; while	if	then	if	else	if	then	assign	const-str	('f')
+	PUSH	0, GR1	; while	if	then	if	else	if	then	assign	const-str
+	LD	GR2, =5	; while	if	then	if	else	if	then	assign	var	idx	left	var	(n)
+	LD	GR1, VAR, GR2	; while	if	then	if	else	if	then	assign	var	idx	left
+	PUSH	0, GR1	; while	if	then	if	else	if	then	assign	var	idx	left
+	POP	GR2	; while	if	then	if	else	if	then	assign	var	idx
+	ADDA	GR2, =13	; while	if	then	if	else	if	then	assign	var
+	POP	GR1	; while	if	then	if	else	if	then	assign
+	ST	GR1, VAR, GR2	; while	if	then	if	else	if	then	assign
+	JUMP	ENDIF5	; while	if	then	if	else	if
+ELSE21	NOP		; while	if	then	if	else	if	else
+	; L170 assign		; while	if	then	if	else	if	else	assign
+	LD	GR1, ='g'	; while	if	then	if	else	if	else	assign	const-str	('g')
+	PUSH	0, GR1	; while	if	then	if	else	if	else	assign	const-str
+	LD	GR2, =5	; while	if	then	if	else	if	else	assign	var	idx	left	var	(n)
+	LD	GR1, VAR, GR2	; while	if	then	if	else	if	else	assign	var	idx	left
+	PUSH	0, GR1	; while	if	then	if	else	if	else	assign	var	idx	left
+	POP	GR2	; while	if	then	if	else	if	else	assign	var	idx
+	ADDA	GR2, =13	; while	if	then	if	else	if	else	assign	var
+	POP	GR1	; while	if	then	if	else	if	else	assign
+	ST	GR1, VAR, GR2	; while	if	then	if	else	if	else	assign
+ENDIF5	NOP		; while	if	then	if	else	if	else
+ENDIF4	NOP		; while	if	then	if	else
+ELSE18	NOP		; while	if
+	; L174 assign		; while	assign
+	LD	GR2, =5	; while	assign	left	var	(n)
+	LD	GR1, VAR, GR2	; while	assign	left
+	PUSH	0, GR1	; while	assign	left
+	PUSH	1	; while	assign	addition	const-uint	(1)
+	POP	GR2	; while	assign	addition
+	POP	GR1	; while	assign	addition
+	ADDA	GR1, GR2	; while	assign	addition
+	PUSH	0, GR1	; while	assign	addition
+	LD	GR2, =5	; while	assign	var	(n)
+	POP	GR1	; while	assign
+	ST	GR1, VAR, GR2	; while	assign
+	JUMP	LOOP1	; while
+ENDLP1	NOP		; while
+	; L177 output		; output
+	LD	GR1, =13	; output	const-str	('AABBCCDDEEffg')
+	PUSH	0, GR1	; output	const-str
+	LAD	GR2, CHAR0	; output	const-str
+	PUSH	0, GR2	; output	const-str
+	POP	GR2	; output
+	POP	GR1	; output
+	CALL	WRTSTR	; output
+	CALL	WRTLN	; output
+	; L178 output		; output
+	PUSH	1	; output	left	var	idx	const-uint	(1)
+	POP	GR2	; output	left	var	idx
+	ADDA	GR2, =13	; output	left	var
+	LD	GR1, VAR, GR2	; output	left
+	PUSH	0, GR1	; output	left
+	POP	GR2	; output
+	CALL	WRTCH	; output
+	PUSH	2	; output	left	var	idx	const-uint	(2)
+	POP	GR2	; output	left	var	idx
+	ADDA	GR2, =13	; output	left	var
+	LD	GR1, VAR, GR2	; output	left
+	PUSH	0, GR1	; output	left
+	POP	GR2	; output
+	CALL	WRTCH	; output
+	PUSH	3	; output	left	var	idx	const-uint	(3)
+	POP	GR2	; output	left	var	idx
+	ADDA	GR2, =13	; output	left	var
+	LD	GR1, VAR, GR2	; output	left
+	PUSH	0, GR1	; output	left
+	POP	GR2	; output
+	CALL	WRTCH	; output
+	PUSH	4	; output	left	var	idx	const-uint	(4)
+	POP	GR2	; output	left	var	idx
+	ADDA	GR2, =13	; output	left	var
+	LD	GR1, VAR, GR2	; output	left
+	PUSH	0, GR1	; output	left
+	POP	GR2	; output
+	CALL	WRTCH	; output
+	PUSH	5	; output	left	var	idx	const-uint	(5)
+	POP	GR2	; output	left	var	idx
+	ADDA	GR2, =13	; output	left	var
+	LD	GR1, VAR, GR2	; output	left
+	PUSH	0, GR1	; output	left
+	POP	GR2	; output
+	CALL	WRTCH	; output
+	PUSH	6	; output	left	var	idx	const-uint	(6)
+	POP	GR2	; output	left	var	idx
+	ADDA	GR2, =13	; output	left	var
+	LD	GR1, VAR, GR2	; output	left
+	PUSH	0, GR1	; output	left
+	POP	GR2	; output
+	CALL	WRTCH	; output
+	PUSH	7	; output	left	var	idx	const-uint	(7)
+	POP	GR2	; output	left	var	idx
+	ADDA	GR2, =13	; output	left	var
+	LD	GR1, VAR, GR2	; output	left
+	PUSH	0, GR1	; output	left
+	POP	GR2	; output
+	CALL	WRTCH	; output
+	PUSH	8	; output	left	var	idx	const-uint	(8)
+	POP	GR2	; output	left	var	idx
+	ADDA	GR2, =13	; output	left	var
+	LD	GR1, VAR, GR2	; output	left
+	PUSH	0, GR1	; output	left
+	POP	GR2	; output
+	CALL	WRTCH	; output
+	PUSH	9	; output	left	var	idx	const-uint	(9)
+	POP	GR2	; output	left	var	idx
+	ADDA	GR2, =13	; output	left	var
+	LD	GR1, VAR, GR2	; output	left
+	PUSH	0, GR1	; output	left
+	POP	GR2	; output
+	CALL	WRTCH	; output
+	PUSH	10	; output	left	var	idx	const-uint	(10)
+	POP	GR2	; output	left	var	idx
+	ADDA	GR2, =13	; output	left	var
+	LD	GR1, VAR, GR2	; output	left
+	PUSH	0, GR1	; output	left
+	POP	GR2	; output
+	CALL	WRTCH	; output
+	PUSH	11	; output	left	var	idx	const-uint	(11)
+	POP	GR2	; output	left	var	idx
+	ADDA	GR2, =13	; output	left	var
+	LD	GR1, VAR, GR2	; output	left
+	PUSH	0, GR1	; output	left
+	POP	GR2	; output
+	CALL	WRTCH	; output
+	PUSH	12	; output	left	var	idx	const-uint	(12)
+	POP	GR2	; output	left	var	idx
+	ADDA	GR2, =13	; output	left	var
+	LD	GR1, VAR, GR2	; output	left
+	PUSH	0, GR1	; output	left
+	POP	GR2	; output
+	CALL	WRTCH	; output
+	PUSH	13	; output	left	var	idx	const-uint	(13)
+	POP	GR2	; output	left	var	idx
+	ADDA	GR2, =13	; output	left	var
+	LD	GR1, VAR, GR2	; output	left
+	PUSH	0, GR1	; output	left
+	POP	GR2	; output
+	CALL	WRTCH	; output
+	CALL	WRTLN	; output
+	RET		; 
+VAR	DS	37	; 
+CHAR0	DC	'AABBCCDDEEffg'	; 
+LIBBUF	DS	256	; 
+	END		; 
+; lib.cas
+;============================================================
+; MULT: 掛け算を行うサブルーチン
+; GR1 * GR2 -> GR2
+MULT	START
+	PUSH	0,GR1	; GR1の内容をスタックに退避
+	PUSH	0,GR3	; GR3の内容をスタックに退避
+	PUSH	0,GR4	; GR4の内容をスタックに退避
+	LAD	GR3,0	; GR3を初期化
+	LD	GR4,GR2
+	JPL	LOOP
+	XOR	GR4,=#FFFF
+	ADDA	GR4,=1
+LOOP	SRL	GR4,1
+	JOV	ONE
+	JUMP	ZERO
+ONE	ADDL	GR3,GR1
+ZERO	SLL	GR1,1
+	AND	GR4,GR4
+	JNZ	LOOP
+	CPA	GR2,=0
+	JPL	END
+	XOR	GR3,=#FFFF
+	ADDA	GR3,=1
+END	LD	GR2,GR3
+	POP	GR4
+	POP	GR3
+	POP	GR1
+	RET
+	END
+;============================================================
+; DIV 割り算を行うサブルーチン
+; GR1 / GR2 -> 商は GR2, 余りは GR1
+DIV	START
+	PUSH	0,GR3
+	ST	GR1,A
+	ST	GR2,B
+	CPA	GR1,=0
+	JPL	SKIPA
+	XOR	GR1,=#FFFF
+	ADDA	GR1,=1
+SKIPA	CPA	GR2,=0
+	JZE	SKIPD
+	JPL	SKIPB
+	XOR	GR2,=#FFFF
+	ADDA	GR2,=1
+SKIPB	LD	GR3,=0
+LOOP	CPA	GR1,GR2
+	JMI	STEP
+	SUBA	GR1,GR2
+	LAD	GR3,1,GR3
+	JUMP	LOOP
+STEP	LD	GR2,GR3
+	LD	GR3,A
+	CPA	GR3,=0
+	JPL	SKIPC
+	XOR	GR1,=#FFFF
+	ADDA	GR1,=1
+SKIPC	XOR	GR3,B
+	CPA	GR3,=0
+	JZE	SKIPD
+	JPL	SKIPD
+	XOR	GR2,=#FFFF
+	ADDA	GR2,=1
+SKIPD	POP	GR3
+	RET
+A	DS	1
+B	DS	1
+	END
+;============================================================
+; 入力装置から数値データを読み込み，
+; その内容をGR2が指すアドレスに格納するサブルーチン
+RDINT	START
+	PUSH	0,GR1	; GR1の内容をスタックに退避
+	PUSH	0,GR3	; GR3の内容をスタックに退避
+	PUSH	0,GR4	; GR4の内容をスタックに退避
+	PUSH	0,GR5	; GR5の内容をスタックに退避
+	PUSH	0,GR6	; GR6の内容をスタックに退避
+	LD	GR5,GR2	; GR2が指す番地をGR5にコピー
+	LD	GR2,=0	; GR2を初期化
+	LD	GR3,=0	; GR3を初期化
+	IN	INAREA,INLEN	; 入力を受け取る
+	; 入力がnullかどうかのチェック
+	CPA	GR3,INLEN
+	JZE	ERROR
+	; 最初の文字が'-'かどうかのチェック
+	LD	GR4,INAREA,GR3
+	LAD	GR3,1,GR3
+	LD	GR6,GR4	; GR6に入力された先頭の文字を保存
+	CPL	GR4,=#002D	; '-'かどうか
+	JZE	LOOP
+	CPL	GR4,='0'	; 数値かどうかのチェック
+	JMI	ERROR
+	CPL	GR4,='9'
+	JPL	ERROR
+	XOR	GR4,=#0030	; 数値だったら変換
+	ADDA	GR2,GR4
+	; 「すでに読み込んだ数値を10倍して，新しく読み込んだ数値と足す」を繰り返す
+LOOP	CPA	GR3,INLEN
+	JZE	CODE	; 入力された文字数とGR3が同じであればループを抜ける
+	LD	GR1,=10
+	CALL	MULT	; GR2の値を10倍する
+	LD	GR4,INAREA,GR3
+	CPL	GR4,='0'	; 数値かどうかのチェック
+	JMI	ERROR
+	CPL	GR4,='9'
+	JPL	ERROR
+	XOR	GR4,=#0030	; GR4の内容を数値に変換
+	ADDA	GR2,GR4	; GR2にGR1の内容を足す
+	LAD	GR3,1,GR3	; GR3(ポインタ)をインクリメント
+	JUMP	LOOP
+	; 最初の文字が'-'であった場合は-1倍する
+CODE	CPL	GR6,=#002D
+	JNZ	END
+	XOR	GR2,=#FFFF
+	LAD	GR2,1,GR2
+	JUMP	END
+	; エラーを出力する
+ERROR	OUT	ERRSTR,ERRLEN
+END	ST	GR2,0,GR5	; GR2の内容をGR5が指す番地に格納する
+	LD	GR2,GR5	; GR5が指す番地をGR2に戻す
+	POP	GR6
+	POP	GR5
+	POP	GR4
+	POP	GR3
+	POP	GR1
+	RET
+ERRSTR	DC	'illegal input'
+ERRLEN	DC	13
+INAREA	DS	6
+INLEN	DS	1
+	END
+;============================================================
+; 入力装置から文字を読み込み，
+; その内容をGR2が指すアドレスに格納するサブルーチン
+RDCH	START
+	IN	INCHAR,INLEN
+	LD	GR1,INCHAR
+	ST	GR1,0,GR2
+	RET
+INCHAR	DS	1
+INLEN	DS	1
+	END
+;============================================================
+; 入力装置から，GR1の文字数を読み込む．
+; 読み込んだ文字列は，GR2 が指すアドレスから順に格納される
+RDSTR	START
+	PUSH	0,GR3	; GR3の内容をスタックに退避
+	PUSH	0,GR4	; GR4の内容をスタックに退避
+	PUSH	0,GR5	; GR5の内容をスタックに退避
+	LAD	GR4,0	; GR4を初期化
+	IN	INSTR,INLEN
+LOOP	CPA	GR4,GR1
+	JZE	END	; GR1で指定された文字数を超えたら終わり
+	CPA	GR4,INLEN
+	JZE	END	; 入力された文字数を超えたら終わり
+	LD	GR5,GR2
+	ADDA	GR5,GR4	; 文字の格納先番地を計算
+	LD	GR3,INSTR,GR4
+	ST	GR3,0,GR5
+	LAD	GR4,1,GR4
+	JUMP	LOOP
+END	POP	GR5
+	POP	GR4
+	POP	GR3
+	RET
+INSTR	DS	256
+INLEN	DS	1
+	END
+;============================================================
+; 入力装置からの文字列を改行まで読み飛ばすサブルーチン
+RDLN	START
+	IN	INAREA,INLEN
+	RET
+INAREA	DS	256
+INLEN	DS	1
+	END
+;============================================================
+; GR2の内容（数値データ）を出力装置に書き出すサブルーチン
+; このサブルーチンが呼ばれたとき，
+; GR7には，出力用番地の先頭アドレスが，
+; GR6には，現在出力用番地に入っている文字数が，
+; それぞれ格納されている．
+WRTINT	START
+	PUSH	0,GR1	; GR1の内容をスタックに退避
+	PUSH	0,GR2	; GR2の内容をスタックに退避
+	PUSH	0,GR3	; GR3の内容をスタックに退避
+	PUSH	0,GR2	; 数値データをもう一度スタックに退避
+	LD	GR3,=0	; GR3はインデックスとして用いる
+	; 数値データが負数である場合は，正の数に変換
+	CPA	GR2,=0
+	JPL	LOOP1
+	XOR	GR2,=#FFFF
+	ADDA	GR2,=1
+	; 数値データを変換しながら，バッファに格納
+LOOP1	LD	GR1,GR2
+	LD	GR2,=10
+	CALL	DIV
+	XOR	GR1,=#0030
+	ST	GR1,BUFFER,GR3
+	LAD	GR3,1,GR3
+	CPA	GR2,=0
+	JNZ	LOOP1
+	; 数値データが負数であれば，'-'を追加
+	POP	GR2
+	CPA	GR2,=0
+	JZE	LOOP2
+	JPL	LOOP2
+	LD	GR1,='-'
+	ST	GR1,BUFFER,GR3
+	LAD	GR3,1,GR3
+	; BUFFERを逆順にたどりながら，出力用バッファに格納
+LOOP2	LAD	GR3,-1,GR3
+	LD	GR1,BUFFER,GR3
+	LD	GR2,GR7
+	ADDA	GR2,GR6
+	ST	GR1,0,GR2
+	LAD	GR6,1,GR6
+	CPA	GR3,=0
+	JNZ	LOOP2
+END	POP	GR3
+	POP	GR2
+	POP	GR1
+	RET
+BUFFER	DS	6
+	END
+;============================================================
+; GR2の内容（文字）を出力装置に書き出すサブルーチン
+; このサブルーチンが呼ばれたとき，
+; GR7には，出力用番地の先頭アドレスが，
+; GR6には，現在出力用番地に入っている文字数が，
+; それぞれ格納されている．
+WRTCH	START
+	PUSH	0,GR1	; GR1の内容をスタックに退避
+	LD	GR1,GR7
+	ADDA	GR1,GR6	; GR1に次の文字を格納する番地を代入
+	ST	GR2,0,GR1
+	LAD	GR6,1,GR6
+	POP	GR1
+	RET
+	END
+;============================================================
+; GR2の指すメモリ番地から，長さGR1の文字列を出力装置に書き出すサブルーチン
+; このサブルーチンが呼ばれたとき，
+; GR7には，出力用番地の先頭アドレスが，
+; GR6には，現在出力用番地に入っている文字数が，
+; それぞれ格納されている．
+WRTSTR	START
+	PUSH	0,GR3	; GR3の内容をスタックに退避
+	PUSH	0,GR4	; GR4の内容をスタックに退避
+	PUSH	0,GR5	; GR5の内容をスタックに退避
+	LAD	GR3,0	; GR3は制御変数として用いる
+LOOP	CPA	GR3,GR1
+	JZE	END
+	LD	GR4,GR2
+	ADDA	GR4,GR3	; 出力する文字の格納番地を計算
+	LD	GR5,0,GR4	; 出力する文字をレジスタにコピー
+	LD	GR4,GR7
+	ADDA	GR4,GR6	; 出力先の番地を計算
+	ST	GR5,0,GR4	; 出力装置に書き出し
+	LAD	GR3,1,GR3
+	LAD	GR6,1,GR6
+	JUMP	LOOP
+END	POP	GR5
+	POP	GR4
+	POP	GR3
+	RET
+	END
+;============================================================
+; 改行を出力装置に書き出すサブルーチン
+; 実質的には，GR7で始まるアドレス番地から長さGR6の文字列を出力する
+WRTLN	START
+	PUSH	0,GR1
+	PUSH	0,GR2
+	PUSH	0,GR3
+	ST	GR6,OUTLEN
+	LAD	GR1,0
+LOOP	CPA	GR1,OUTLEN
+	JZE	END
+	LD	GR2,GR7
+	ADDA	GR2,GR1
+	LD	GR3,0,GR2
+	ST	GR3,OUTSTR,GR1
+	LAD	GR1,1,GR1
+	JUMP	LOOP
+END	OUT	OUTSTR,OUTLEN
+	LAD	GR6,0	; 文字列を出力して，GR6を初期化
+	POP	GR3
+	POP	GR2
+	POP	GR1
+	RET
+OUTSTR	DS	256
+OUTLEN	DS	1
+	END
